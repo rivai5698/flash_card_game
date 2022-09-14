@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'card_page.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -10,10 +12,9 @@ class HomePage extends StatelessWidget {
         title: const Text('Cards game'),
         centerTitle: true,
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: double.infinity,
-
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -21,20 +22,62 @@ class HomePage extends StatelessWidget {
             const Center(
               child: Text(
                 'Chose level: ',
-                style: TextStyle(color: Colors.blue, fontSize: 30,fontWeight: FontWeight.bold,),
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             const SizedBox(
-              height: 24,
+              height: 32,
             ),
             Flexible(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
                 children: [
-                  levelButton('Level 1'),
-                  levelButton('level 2'),
-                  levelButton('Level 3'),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CardPage(
+                                      level: 1,
+                                      column: 2,
+                                    )));
+                      },
+                      child: const Text(
+                        'Level 1',
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CardPage(
+                                      level: 2,
+                                      column: 2,
+                                    )));
+                      },
+                      child: const Text(
+                        'Level 2',
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      )),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CardPage(
+                                      level: 3,
+                                      column: 4,
+                                    )));
+                      },
+                      child: const Text(
+                        'Level 3',
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      )),
                 ],
               ),
             ),
@@ -48,9 +91,7 @@ class HomePage extends StatelessWidget {
     return Container(
       color: Colors.blue,
       child: ElevatedButton(
-          onPressed: () {
-
-          },
+          onPressed: () {},
           child: Text(
             text,
             style: const TextStyle(color: Colors.white, fontSize: 15),

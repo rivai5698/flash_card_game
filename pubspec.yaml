@@ -57,22 +57,23 @@ flutter:
   uses-material-design: true
   assets:
      - assets/images/clubs/che.png
-#    - bha.png
-#    - ../images/clubs/che.png
-#    - images/clubs/crp.png
-#    - images/clubs/lc.png
-#    - images/clubs/liv.png
-#    - images/clubs/mc.png
-#    - images/clubs/tot.png
-#    - images/clubs/whu.png
-#    - images/players/haaland.png
-#    - images/players/lamptey.png
-#    - images/players/madison.png
-#    - images/players/mount.png
-#    - images/players/son.png
-#    - images/players/vandijk.png
-#    - images/players/zaha.png
-#    - images/players/zouma.png
+     - assets/images/clubs/crp.png
+     - assets/images/clubs/lc.png
+     - assets/images/clubs/liv.png
+     - assets/images/clubs/mc.png
+     - assets/images/clubs/tot.png
+     - assets/images/clubs/whu.png
+     - assets/images/players/haaland.png
+     - assets/images/players/lamptey.png
+     - assets/images/players/madison.png
+     - assets/images/players/mount.png
+     - assets/images/players/son.png
+     - assets/images/players/vandijk.png
+     - assets/images/players/zaha.png
+     - assets/images/players/zouma.png
+
+    #    - bha.png
+    #    - ../images/clubs/che.png
   # To add assets to your application, add an assets section, like this:
 
   #   - images/a_dot_burr.jpeg
